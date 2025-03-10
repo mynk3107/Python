@@ -41,3 +41,11 @@ def val_city(city):
     if city in ['Mumbai', 'Bangalore']:
         return True
     return False
+
+def read_master_data():
+    product_list = []
+    with open('../master_data/product_master.csv') as f :
+        products = f.readlines()[1:]
+        for product in products:
+            product_list.append(product.split(',')[0])
+        return product_list
