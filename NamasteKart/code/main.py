@@ -69,3 +69,22 @@ def main():
 
                             if val_pid and val_od and val_city and len(val_empty) == 0 and val_sales:
                                 continue
+                              else:
+                                row_str = ''
+                                flag = False
+                                if not os.path.exists(f'{rejected_files_path}'):
+                                    os.makedirs(f'{rejected_files_path}', exist_ok=True)
+                                shutil.copy(f'{incoming_files_path}/{file}', f'{rejected_files_path}/{file}')
+                                rejected_cnt += 1
+                                with open(f'{rejected_files_path}/error_{file}', 'a') as f:
+                                    for key in order_dict.keys():
+                                        row_str = row_str + order_dict[key] + ','
+                                    row_str = row_str + rejected_reason
+                                    row_str = row_str.strip(',')
+                                    if not header:
+                                        f.write('order_id,order_date,product_id,quantity,sales,city,rejected_reason')
+                                        f.write('\n')
+                                        header = True
+                                    f.write(row_str)
+                                    f.write('\n')
+                                    f.close()   
