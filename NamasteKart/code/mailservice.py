@@ -3,9 +3,9 @@ import ssl
 import smtplib
 
 def sendmail(subject, body):
-    email_sender = 'ankitbansal1988@gmail.com'
+    email_sender = 'mayankgupta9521@gmail.com'
     email_password = '******'
-    email_receiver = 'ankitbansal1988@gmail.com'
+    email_receiver = 'mayankgupta9521@gmail.com'
 
     em = EmailMessage()
     em['From'] = email_sender
