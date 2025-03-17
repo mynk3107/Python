@@ -88,3 +88,35 @@ def main():
                                     f.write(row_str)
                                     f.write('\n')
                                     f.close()   
+
+                            else:
+                            if flag:
+                                if not os.path.exists(f'{success_files_path}'):
+                                    os.makedirs(f'{success_files_path}', exist_ok=True)
+                                shutil.copy(f'{incoming_files_path}/{file}', f'{success_files_path}/{file}')
+                                success_cnt += 1
+                    else:
+                        if not os.path.exists(f'{rejected_files_path}'):
+                            os.makedirs(f'{rejected_files_path}', exist_ok=True)
+                        shutil.copy(f'{incoming_files_path}/{file}', f'{rejected_files_path}/{file}')
+
+                        with open(f'{rejected_files_path}/error_{file}', 'a') as f:
+                            f.write("Empty file")
+                            f.close()
+                        rejected_cnt += 1
+            else:
+                body = f"""
+                Total Files: {total_cnt} \n
+                Successful Files: {success_cnt} \n
+                Rejected Files: {rejected_cnt}
+                """
+                ms.sendmail(subject, body)
+        else:
+            ms.sendmail(subject, "No file present in source folder.")
+
+    except Exception as e:
+        print(str(e))
+
+
+main()
+
