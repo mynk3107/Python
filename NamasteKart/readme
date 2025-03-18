@@ -1,4 +1,4 @@
-A online mart called namasteKart operating in Bangalore and Mumbai. Everday all the transactions/orders files are generated and sent for validation.
+An online mart called namasteKart operating in Bangalore and Mumbai. Everday all the transactions/orders files are generated and sent for validation.
 need to verify all the files and notify business in case of any issues.
 
 creating this folder structure 
