@@ -108,9 +108,9 @@ def main():
                         rejected_cnt += 1
             else:
                 body = f"""
-                Total Files: {total_cnt} \n
-                Successful Files: {success_cnt} \n
-                Rejected Files: {rejected_cnt}
+                Total_Files: {total_cnt} \n
+                Successful_Files: {success_cnt} \n
+                Rejected_Files: {rejected_cnt}
                 """
                 ms.sendmail(subject, body)
         else:
