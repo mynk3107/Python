@@ -106,6 +106,7 @@ def main():
                             f.write("Empty file")
                             f.close()
                         rejected_cnt += 1
+#else_satetment
             else:
                 body = f"""
                 Total_Files: {total_cnt} \n
