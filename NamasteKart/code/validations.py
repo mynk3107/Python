@@ -1,5 +1,4 @@
 import datetime
-
 from dateutil.utils import today
 
 
