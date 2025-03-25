@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+ #!/usr/bin/env python
 # coding: utf-8
 
 # In[37]:
@@ -6,8 +6,8 @@
 
 import pandas as pd
 emp= {"name":["Ankit","Rahul","Priya"],"gender":["Male","Male","Female"], "email":["ankit@gmail.com","rahul@gmail.com","priya@gmail.com"] }
-df = pd.DataFrame(emp)
-df
+df1 = pd.DataFrame(emp)
+df1
 
 
 # In[10]:
