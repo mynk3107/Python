@@ -96,7 +96,7 @@ def main():
                                 if not os.path.exists(f'{success_files_path}'):
                                     os.makedirs(f'{success_files_path}', exist_ok=True)
                                 shutil.copy(f'{incoming_files_path}/{file}', f'{success_files_path}/{file}')
-                                success_cnt = success_cnt + 1
+                                success_cnt += 1
                     else:
                         if not os.path.exists(f'{rejected_files_path}'):
                             os.makedirs(f'{rejected_files_path}', exist_ok=True)
