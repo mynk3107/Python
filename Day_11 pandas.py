@@ -29,10 +29,10 @@ pd.to_datetime(dates, format='mixed',errors='ignore')
 # In[54]:
 
 
-#df = pd.read_csv('orders.txt',parse_dates=['order_date'],index_col='order_date')
-#df.loc['2020-01-01':'2020-01-05']
-#df.sort_index(inplace=True)
-#f.loc['2020-01-01' :'2020-03-01']
+df = pd.read_csv('orders.txt',parse_dates=['order_date'],index_col='order_date')
+df.loc['2020-01-01':'2020-01-05']
+df.sort_index(inplace=True)
+df.loc['2020-01-01' :'2020-03-01']
 df.loc['2020-01-01':'2020-01-05']
 
 
