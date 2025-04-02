@@ -147,6 +147,6 @@ df_json
 
 import pyarrow
 #df.to_parquet('orders_p.parquet',engine='pyarrow')
-df_p=pd.read_parquet('orders_p.parquet',engine='pyarrow')
-df_p
+df_pd=pd.read_parquet('orders_p.parquet',engine='pyarrow')
+df_pd
 
